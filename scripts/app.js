@@ -12,6 +12,8 @@ function listSyncService(){
     {"name" : 'cholo', 'amount' : '1'},
     {"name" : 'milk', 'amount' : '10'},
     {"name" : 'veggg', 'amount' : '5'},
+    {"name" : 'meat', 'amount' : '6'},
+    {"name" : 'pitzza', 'amount' : '6'},
   ];
   self.chekItem = function(item, index){
       self.boughtItems.push(item);
