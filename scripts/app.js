@@ -7,6 +7,7 @@ var shoppingList = angular.module("shoppingList" , [])
 
 function listSyncService(){
   var self = this;
+  self.boughtItems = [];
   self.itesmToBuy = [
     {"name" : 'cholo', 'amount' : '1'},
     {"name" : 'milk', 'amount' : '10'},
@@ -24,8 +25,8 @@ function requierdItems($scope , listSyncService){
 
   items.itesmToBuy = listSyncService.itesmToBuy;
   items.markItem = function (item , index){
-    var itemToMark = {"name" : item.name , "amount" : item.amount}
-    listSyncService.chekItem(itemoToMark , index);
+    var itemToRemove = {"name" : item.name , "amount" : item.amount}
+    listSyncService.chekItem(itemToRemove , index);
   }
 }
 
