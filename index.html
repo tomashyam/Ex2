@@ -40,7 +40,7 @@
          <button ng-click="items.markItem(item , $index)" class="btn btn-default" ><span class="glyphicon glyphicon-ok"></span> Bought</button>
        </li>
      </ul>
-     <div class="emptyMessage" ng-hide="!items.length">Everything is bought!</div>
+     <div class="emptyMessage" ng-if="!items.itesmToBuy.length">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
@@ -49,7 +49,7 @@
      <ul>
        <li ng-repeat="item in items.boughtItems">allredy bought {{item.name}} {{item.amount}}</li>
      </ul>
-     <div class="emptyMessage" ng-hide="items.boughtItems.length">Nothing bought yet.</div>
+     <div class="emptyMessage" ng-if="!items.boughtItems.length">Nothing bought yet.</div>
     </div>
   </div>
 </div>
