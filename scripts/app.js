@@ -1,3 +1,5 @@
+(function(){
+'use strict';
 var shoppingList = angular.module("shoppingList" , [])
 .service('listSyncService' , listSyncService)
 .controller('requierdItems' , requierdItems)
@@ -35,3 +37,4 @@ function boughtItems($scope , listSyncService){
   var items = this;
   items.boughtItems = listSyncService.boughtItems;
 }
+})()
