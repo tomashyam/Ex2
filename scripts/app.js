@@ -12,8 +12,6 @@ function listSyncService(){
     {"name" : 'milk', 'amount' : '10'},
     {"name" : 'veggg', 'amount' : '5'},
   ];
-  self.boughtItems = [];
-
   self.chekItem = function(item, index){
       self.boughtItems.push(item);
       self.itesmToBuy.splice(index ,1);
@@ -26,10 +24,9 @@ function requierdItems($scope , listSyncService){
 
   items.itesmToBuy = listSyncService.itesmToBuy;
   items.markItem = function (item , index){
-    var copyOfItem = {"name" : item.name , "amount" : item.amount}
-    listSyncService.chekItem(copyOfItem , index);
+    var itemToMark = {"name" : item.name , "amount" : item.amount}
+    listSyncService.chekItem(itemoToMark , index);
   }
-
 }
 
 boughtItems.$inject = ['$scope' , "listSyncService"]
